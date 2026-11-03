@@ -1,0 +1,48 @@
+{
+  "name": "@narre/cli",
+  "version": "0.1.0",
+  "description": "A fake coding agent with a terminal UI, for testing tools that drive coding agents",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist",
+    "!dist/**/*.test.*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allanhvam/narre.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "node --test src/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@agentclientprotocol/sdk": "^2.4.0",
+    "@types/node": "^24.19.2",
+    "typescript": "^6.0.3"
+  },
+  "bin": {
+    "narre": "./dist/narre.js"
+  },
+  "author": "Allan Hvam",
+  "homepage": "https://github.com/allanhvam/narre#readme",
+  "bugs": {
+    "url": "https://github.com/allanhvam/narre/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "coding-agent",
+    "fake",
+    "mock",
+    "testing",
+    "tui",
+    "cli"
+  ]
+}
